@@ -29,7 +29,7 @@ h1 {
     margin: 0;
 }
 h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     margin: 0;
 }
@@ -45,6 +45,9 @@ h2 {
     position: relative;
     top: calc(50%);
     transform: translateY(-50%);
+}
+#presentation p {
+    font-size: 1.5rem;
 }
 
 .container {
@@ -100,6 +103,10 @@ h2 {
 .qualidade button {
     width: 10rem;
 }
+.article-container img {
+    width: 50%;
+    max-width: 500px;
+}
 
 .article-container {
     display: flex;
@@ -126,7 +133,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height:25rem ;
     padding-left: 4rem;
 }
 #footer-list {
@@ -177,8 +183,11 @@ h3{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,1fr) ;
+    width: 100%;
 }
-
+.grid-container-companies img {
+    width: 100%;
+}
 .grid-item-companies {
     text-align: center;
 }
@@ -210,4 +219,167 @@ h3{
 .company-9 {
     grid-area: 3/1;
     padding-top: 10px;
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    #presentation h1{
+        font-size: 54px;
+    }
+    #presentation p {
+        font-size: 1rem;
+    }
+    .grid-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .grid-container-companies {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        width: 100%
+    }
+    .company-1 {
+        grid-area: auto;
+    }
+    .company-2 {
+        grid-area: auto;
+    }
+    .company-3 {
+        grid-area: auto;
+    }
+    .company-4 {
+        grid-area: auto;
+    }
+    .company-5 {
+        grid-area: auto;
+    }
+    .company-6 {
+        grid-area: auto;
+    }
+    .company-7 {
+        grid-area: auto;
+    }
+    .company-8 {
+        grid-area: auto;
+    }
+    .company-9 {
+        grid-area: auto;
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    body{
+        text-align: center;
+    }
+    #presentation-container {
+        padding: 0;
+        text-align: center;
+    }
+    #presentation h1{
+        font-size: 33px;
+    }
+    #presentation p {
+        font-size: .8rem;
+    }
+
+    .grid-container{
+        grid-template-columns:1fr;
+    }
+    .qualities {
+        display: flex;
+        flex-direction: column;
+    }
+    .qualities img {
+        transform: rotate(90deg);
+        margin: 2.5rem 0;
+    }
+
+    #background-red {
+       height: auto;
+       text-align: center;
+       padding: 2rem 0;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .article-container:nth-child(odd) {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .article-container:nth-child(even) {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .article-detals {
+        margin: 0;
+    }
+        
+
+    .qualidade button {
+        width: 100%;
+    }
+
+    .grid-container-companies {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .company-1 {
+        grid-area: auto;
+    }
+    .company-2 {
+        grid-area: auto;
+    }
+    .company-3 {
+        grid-area: auto;
+    }
+    .company-4 {
+        grid-area: auto;
+    }
+    .company-5 {
+        grid-area: auto;
+    }
+    .company-6 {
+        grid-area: auto;
+    }
+    .company-7 {
+        grid-area: auto;
+    }
+    .company-8 {
+        grid-area: auto;
+    }
+    .company-9 {
+        grid-area: auto;
+        padding-top: 0;
+    }
+
+    footer {
+        padding: 0;
+    }
+    footer ul {
+        padding: 1rem 0 1rem 2rem;
+    }
+    #footer-list {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    #footer-end {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        align-items: center;
+        padding: 4rem 0;
+    }
+
+    .container {
+        padding: 1rem 0;
+    }
+    #footer-end div:last-child{
+        margin-right: 0;
+    }
 }
